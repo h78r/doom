@@ -1,0 +1,142 @@
+/* Base Layout */
+body {
+  background-color: teal;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.window {
+  width: 90%;
+  max-width: 1024px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#doom-container {
+  width: 100%;
+  height: 480px;
+}
+
+.title-bar {
+  min-width: 320px;
+}
+
+.status-bar {
+  font-size: 12px;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  body {
+    display: block;
+    padding: 5px;
+    height: auto;
+  }
+
+  .window {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  #doom-container {
+    height: 300px;
+  }
+
+  .status-bar {
+    font-size: 10px;
+  }
+
+  .title-bar-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #doom-container {
+    height: 240px;
+  }
+
+  .status-bar {
+    font-size: 9px;
+  }
+
+  .title-bar-text {
+    font-size: 12px;
+  }
+}
+
+@media (orientation: portrait) {
+  #doom-container {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 0;
+    height: 100vh;
+  }
+
+  .window {
+    width: 1024px;
+    height: 768px;
+  }
+
+  #doom-container {
+    width: 100%;
+    height: calc(768px - 60px);
+  }
+}
+
+/* CRT Blue Screen */
+@keyframes flicker {
+  0%, 100% { opacity: 1; transform: translate(0, 0); }
+  1% { opacity: 0.95; transform: translate(-1px, 0); }
+  2% { opacity: 0.97; transform: translate(1px, 0); }
+  3% { opacity: 0.9; transform: translate(0, -1px); }
+  4% { opacity: 0.98; transform: translate(0, 1px); }
+}
+
+body.crt-mode {
+  background-color: #0000AA;
+  font-family: 'Perfect DOS VGA 437', monospace;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.crt {
+  position: relative;
+  width: 640px;
+  height: 400px;
+  white-space: pre;
+  animation: flicker 0.15s infinite;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+.crt::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.05) 0%, transparent 80%);
+  mix-blend-mode: screen;
+}
