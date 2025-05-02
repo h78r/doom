@@ -25,7 +25,8 @@
       <div id="doom-container"></div>
       <script>
         emulators.pathPrefix = "";
-        Dos(document.getElementById("doom-container")).run("doom.jsdos");
+        window.dos = Dos(document.getElementById("doom-container"));
+        window.dos.run("doom.jsdos");
       </script>
     </div>
 
