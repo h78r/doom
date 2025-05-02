@@ -65,5 +65,11 @@ Press any key to continue _
     }, 1000); // 1 second delay
   });
   </script>
+  <script> 
+    document.querySelector('.title-bar-controls button[aria-label="Help"]').addEventListener('click', () => {      
+        window.dos.stop();
+        document.getElementById("doom-container").innerHTML = "Hello World!"
+  </script>
+  
 </body>
 </html>
