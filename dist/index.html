@@ -38,10 +38,10 @@
   </div>
 
   <script>
-    document.querySelector('.title-bar-controls button').addEventListener('click', () => {
-      window.dos.stop();
-      document.body.className = 'crt-mode';
-      document.body.innerHTML = `
+      document.querySelector('.title-bar-controls button[aria-label="Close"]').addEventListener('click', () => {      
+        window.dos.stop();
+        document.body.className = 'crt-mode';
+        document.body.innerHTML = `
         <div class="crt">
 A fatal exception 0E has occurred at 0028:C000BEEF in DOOM.EXE +
 0000DEAD. The current application will be terminated.
