@@ -38,6 +38,7 @@
 
   <script>
     document.querySelector('.title-bar-controls button').addEventListener('click', () => {
+      window.dos.stop();
       document.body.className = 'crt-mode';
       document.body.innerHTML = `
         <div class="crt">
