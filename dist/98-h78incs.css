@@ -1,0 +1,11 @@
+.window .title-bar .icon {
+    height: 16px;
+    width: 16px;
+    margin-right: 4px;
+  }
+  
+  .title-bar-text-with-icon {
+    display: flex;
+    align-items: center;
+  }
+  
