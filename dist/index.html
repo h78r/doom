@@ -25,22 +25,21 @@
       <button aria-label="Close"></button>
     </div>
   </div>
-</div>
 
-    <div class="window-body">
-      <div id="doom-container"></div>
-      <script>
-        emulators.pathPrefix = "";
-        window.dos = Dos(document.getElementById("doom-container"));
-        window.dos.run("doom.jsdos");
-      </script>
-    </div>
-
-    <div class="status-bar">
-      <p class="status-bar-field">Status: OK</p>
-      <p class="status-bar-field">h78.co.uk</p>
-    </div>
+  <div class="window-body">
+    <div id="doom-container"></div>
+    <script>
+      emulators.pathPrefix = "";
+      window.dos = Dos(document.getElementById("doom-container"));
+      window.dos.run("doom.jsdos");
+    </script>
   </div>
+
+  <div class="status-bar">
+    <p class="status-bar-field">Status: OK</p>
+    <p class="status-bar-field">h78.co.uk</p>
+  </div>
+</div>
 
   <script>
       document.querySelector('.title-bar-controls button[aria-label="Close"]').addEventListener('click', () => {      
