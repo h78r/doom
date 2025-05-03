@@ -8,7 +8,7 @@ if [ -z "$DEPLOY_DIR" ]; then
   exit 1
 fi
 
-# Get a safe name for use in the backup file (e.g., h78_co_uk from /var/www/h78.co.uk)
+# Get a safe name for use in the backup file
 DEPLOY_NAME=$(basename "$DEPLOY_DIR" | tr '.' '_')
 
 echo "Performing git pull in $DEPLOY_DIR/staging/doom..."
