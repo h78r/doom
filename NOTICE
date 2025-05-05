@@ -1,3 +1,8 @@
+This project is an independent, technical recreation of legacy user interface elements inspired by MS-DOS and Windows 98. It is intended for educational and archival purposes only.
+This work is not affiliated with or endorsed by Microsoft Corporation.
+“MS-DOS” and “Windows” are registered trademarks of Microsoft and are referenced here solely for descriptive and historical accuracy.
+
+
 License Exception Notice:
 The binary distributed with this project contains the DOOM Shareware IWAD file (`doom1.wad`) and DOOM Shareware Executable 'doom.exe',
 which is NOT licensed under the GPL. It remains the property of id Software and is redistributed
